@@ -3,16 +3,18 @@
 This sample project shows our common ways to implement RESTful API server. And use dockerfile to make sure the environment is consistent.
 
 Here is the implementation of a model :User
+
 Sometime, we have many models, which mean to implement one user has many todos.
 
-Main libraries used:
+
+## Main libraries used
 1. Flask-Migrate - for handling all database migrations.
 2. Flask-RESTful - restful API library.
 3. Flask-Script - provides support for writing external scripts.
 4. Flask-SQLAlchemy - adds support for SQLAlchemy ORM.
 5. PyMySQL - Python MySQL client library.
 
-Project structure:
+## Project structure
 ```
 .
 ├── README.md
