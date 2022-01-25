@@ -1,0 +1,88 @@
+openapi: 3.0.0
+info:
+  title: Rooney API
+  description: |-
+    Rooney API
+
+    Please descripte more detail message like how to test API endpoint.
+
+  version: '1.0'
+servers:
+  - url: https://example.rooney.com
+paths:
+  '/users':
+    get:
+      summary: Get all user information
+      description: |
+
+      tags:
+        - User API
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  count:
+                    type: number
+                  users:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                        name:
+                          type: string
+                        email:
+                          type: string
+                example:
+                  count: 2
+                  users: [{'id':1, 'name': 'test-1', 'email':'test-1@xxx.ooo'},{'id':2, 'name': 'test-2', 'email':'test-1@xxx.ooo'}]
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '402':
+          $ref: '#/components/responses/Unauthorized'
+        '5XX':
+          $ref: '#/components/responses/UnexpectedError'
+  '/users/<int:user_id>':
+    get:
+      summary: Update user information
+      description: |
+
+      tags:
+        - User API
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  name:
+                    type: string
+                  email:
+                    type: string
+                example: {'id':1, 'name': 'test-1', 'email':'test-1@xxx.ooo'}
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '402':
+          $ref: '#/components/responses/Unauthorized'
+        '5XX':
+          $ref: '#/components/responses/UnexpectedError'
+
+components:
+  responses:
+    OK:
+      description: The resource works successfully.
+    BadRequest:
+      description: Bad request.
+    Unauthorized:
+      description: Authorization information is missing or invalid.
+    UnexpectedError:
+      description: Unexpected error.
