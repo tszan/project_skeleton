@@ -150,7 +150,6 @@ GET http://localhost:5000/api/v1/users?name=test-2
         }
     ]
 }
-}
 ```
 
 ### If we need to query by page, we can use limit and offset, for example:
