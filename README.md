@@ -1,4 +1,5 @@
 # Flask RESTful API project skeleton
+[![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-black.svg)](https://sonarcloud.io/summary/new_code?id=project_skeleton)
 
 This sample project shows our common ways to implement RESTful API server. And use dockerfile to make sure the environment is consistent.
 
