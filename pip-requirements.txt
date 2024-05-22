@@ -1,4 +1,4 @@
-Flask==2.0.2
+Flask==2.2.5
 Flask-Migrate==3.1.0
 Flask-RESTful==0.3.9
 Flask-Script==2.0.6
